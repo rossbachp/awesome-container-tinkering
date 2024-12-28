@@ -1,40 +1,106 @@
-# Development Tools - (alpha)
+# Container Development Tools
 
-Here you can find information about development tools.
+Here you can find information about some useful container development tools.
 
 ## Editor
 
 ### NeoVIM
 
+[Neovim](https://neovim.io) is an extensible text editor that serves as an improved version of Vim, aiming to enhance its functionality while maintaining compatibility with Vim's features.
+
+Nvim offers modern features like better extensibility, an asynchronous plugin architecture, and improved performance, making it ideal for both developers and power users. Neovim allows for extensive customization and is highly popular for programming tasks, with strong community support and a growing ecosystem of plugins. It runs on multiple platforms and provides a powerful, keyboard-centric user interface that allows for efficient text editing.
+
 ### VSCode
 
-* YAML SCHEMA
+[Visual Studio Code (VS Code)](https://code.visualstudio.com) is a lightweight code editor developed by Microsoft.
+
+VSCode supports a wide range of programming languages and offers powerful features like syntax highlighting, debugging, IntelliSense code completion, and Git integration. VS Code is highly customizable through extensions, enabling users to enhance its functionality with tools for various programming languages, frameworks, and workflows. It is available on Windows, macOS, and Linux, making it a popular choice for developers seeking a fast, efficient, and feature-rich coding environment.
+
+* [Visual Studio Code Kubernetes Tools](https://github.com/vscode-kubernetes-tools/vscode-kubernetes-tools)
+* [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
+* [yaml-language-server](https://github.com/redhat-developer/yaml-language-server)
+* [Docker in Visual Studio Code](https://code.visualstudio.com/docs/containers/overview)
 
 ### Jetbrains
 
+[JetBrains Container Tools](https://www.jetbrains.com/) is a set of tools designed to integrate JetBrains development environments, such as IntelliJ IDEA, with containerized workflows.
+
+These tools streamline the management of Docker containers and Kubernetes clusters directly within the JetBrains IDE, providing developers with an integrated experience for building, testing, and deploying containerized applications. JetBrains Container Tools allow users to work with Docker images, interact with Kubernetes clusters, and easily debug and deploy containerized applications, improving productivity in container-centric development environments.
+
 ### Eclipse
+
+[ECLIPSE IDE](https://eclipseide.org) is a widely used, open-source integrated development environment primarily geared toward Java development but also supports other languages through plugins, such as C/C++, Python, and JavaScript. 
+
+Eclipse known for its extensibility, Eclipse provides features like code editing, debugging, testing, and version control integration, making it a versatile tool for software development. It supports a variety of build systems, frameworks, and development tools, and is popular among developers for its robust plugin ecosystem, customization options, and compatibility with major platforms. Eclipse IDE is used for both small-scale projects and large enterprise applications.
+
+The [Eclipse Docker Tooling ](https://marketplace.eclipse.org/content/eclipse-docker-tooling)plugin provides the ability to manage Docker images and containers from within the Eclipse IDE.
 
 ## CI
 
 ### Github Actions
 
+[GitHub Actions](https://github.com/features/actions) is a CI/CD (Continuous Integration and Continuous Deployment) automation tool integrated into GitHub, enabling developers to automate workflows directly within their repositories.
+
+GH allows users to define custom workflows using YAML configuration files for building, testing, and deploying code. GitHub Actions supports event-driven automation, such as running actions on push, pull request, or other events, and integrates seamlessly with GitHub's version control system. With a wide array of pre-built actions available in the GitHub marketplace, users can easily create complex, reusable pipelines for various tasks, improving efficiency and collaboration in the development lifecycle.
+
+* [self-hosted-runners/](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners)
+* [Actuated](https://actuated.com)
+
 ### Dagger
+
+[Dagger](https://dagger.io) is a modern, programmable CI/CD (Continuous Integration and Continuous Deployment) engine designed to automate workflows using code. 
+
+Dagger provides a flexible and portable approach to building, testing, and deploying applications in containers, with pipelines defined through a programming language. Dagger integrates with various version control systems and supports seamless integration across different platforms and services. It aims to simplify automation tasks, reduce redundancy, and offer a scalable solution for complex DevOps workflows, making it easier to define, share, and collaborate on pipelines with a developer-friendly, code-first approach.
 
 ### Gitlab
 
+[GitLab](https://about.gitlab.com) - "is a web-based DevOps platform that provides a complete set of tools for software development and lifecycle management. It supports features like version control, continuous integration/continuous deployment (CI/CD), project management, and code review, all in a single application."
+
+GitLab is designed to streamline collaboration across development teams, making it easier to plan, build, test, and deploy software. It is open-source with both free and enterprise versions, offering robust scalability, security features, and integration with various development tools, enabling teams to deliver software more efficiently.
+
 ### Gitea
+
+[Gitea](https://about.gitea.com) - "is a lightweight, open-source Git hosting platform that provides version control and collaboration features similar to GitHub or GitLab."
+
+Gitea is designed to be fast, simple, and easy to install, offering a self-hosted solution for managing Git repositories. Gitea provides tools for issue tracking, pull requests, code reviews, and continuous integration, all within a user-friendly interface. Its lightweight nature makes it ideal for small teams or individuals who want to manage their code and projects locally or on their own infrastructure, with strong community support and customization options.
 
 ### Jenkins
 
+[Jenkins](https://www.jenkins.io) is an automation server used for continuous integration (CI) and continuous delivery (CD)."
+
+Jenkins helps developers automate the building, testing, and deployment of applications by defining workflows through pipelines. Jenkins supports a wide range of plugins to integrate with version control systems, build tools, testing frameworks, and deployment environments. With its large community and strong ecosystem, Jenkins allows teams to streamline software development processes, reduce manual tasks, and ensure more consistent and reliable releases. It can be easily extended and customized to fit various development workflows.
+
 ### Tekton 
+
+[Tekton](https://tekton.dev) - "is a framework for building CI/CD systems, providing Kubernetes-native solutions for defining, managing, and running continuous integration and deployment pipelines."
+
+Tekton allows developers to automate the creation of pipelines and workflows within Kubernetes clusters, leveraging Kubernetes resources such as pods and containers. Tekton supports scalability and flexibility, making it easy to integrate with other tools and services. By using reusable components like Tasks and Pipelines, Tekton enables teams to create consistent, portable, and maintainable CI/CD pipelines in cloud-native environments.
 
 ## Config Management
 
 ### Ansible
 
+[Ansible](https://github.com/ansible/ansible) is an open-source automation tool that simplifies IT infrastructure management, configuration, and application deployment.
+
+Ansible uses a declarative language to describe system configurations and tasks, ensuring consistency across environments. Ansible works by connecting to remote machines over SSH, with no need for agents or special software installed on the managed systems. It is highly extensible, supporting numerous modules for various platforms and applications. Ansible is widely used in DevOps for automating routine tasks, managing cloud infrastructure, and streamlining software deployment processes.
+
 ### Terraform
 
+[Terraform](https://www.terraform.io) is an open-source infrastructure as code (IaC) tool developed by HashiCorp that allows users to define, provision, and manage infrastructure using declarative configuration files.
+
+Terraform supports various cloud providers, including AWS, Azure, and Google Cloud, as well as on-premises systems. With Terraform, infrastructure changes are made in a version-controlled manner, enabling reproducible, consistent, and automated provisioning. It integrates with numerous services and enables collaboration in managing infrastructure at scale, making it a popular choice for DevOps and infrastructure teams.
+
+### OpenTofu
+
+[OpenTofu](https://opentofu.org/) is an open-source infrastructure as code (IaC) project that enables the automation of cloud and infrastructure provisioning, similar to Terraform. 
+
+OpenTofu allows developers to define and manage infrastructure with declarative configuration files, making infrastructure reproducible, version-controlled, and easily scalable. OpenTofu focuses on providing transparency, flexibility, and community-driven innovation while supporting multiple cloud platforms and services. Its goal is to offer a fully open-source, collaborative alternative for managing infrastructure, helping users automate their workflows efficiently while ensuring infrastructure consistency.
+
 ### Makefile
+
+A [Makefile](https://makefiletutorial.com) is a special file used by the [make](https://www.gnu.org/software/make/) build automation tool to define a set of instructions and dependencies for automating tasks, typically in software development.
+
+Makefile specifies how to build and manage target files (such as executable binaries or libraries) from source files. Makefiles are commonly used for compiling code, managing dependencies, and automating repetitive tasks. They support features such as conditional statements, variable definitions, and rules to control the execution flow. Makefiles improve efficiency and consistency by ensuring tasks are performed correctly and in the right order.
 
 ### DevBox
 
@@ -80,11 +146,26 @@ Flux automates deployment updates by applying changes as new code becomes availa
 
 ### JenkinsX
 
+[Jenkins X](https://jenkins-x.io) is an open-source CI/CD solution designed for Kubernetes and cloud-native applications.
+
+JenkinsX automates the development and deployment of applications by providing a set of tools and workflows tailored for Kubernetes environments. Jenkins X supports GitOps, Kubernetes-native pipelines, and automated promotions through environments such as staging and production. It integrates with popular version control systems like GitHub and GitLab and features a strong focus on automating the entire software delivery pipeline, from code commit to deployment. Jenkins X aims to improve the speed and reliability of software delivery with minimal manual intervention.
+
 ## SCM
 
 ### GIT
 
-### SVN
+[Git](https://git-scm.com) - "is a distributed version control system that allows developers to track changes in source code during software development."
+
+Git enables multiple developers to work on the same project concurrently, manage revisions, and collaborate efficiently. Git is known for its speed, flexibility, and strong branching and merging capabilities. The official Git website (git-scm.com) provides downloads, documentation, and resources to help users understand and use Git effectively. Git is widely adopted by development teams for its powerful tools, scalability, and integration with services like GitHub, GitLab, and Bitbucket.
+
+### Apache Subversion
+
+[Apache Subversion (SVN) ](https://subversion.apache.org)is an open-source version control system used for managing and tracking changes to files and directories over time. 
+
+SVN allows developers to collaborate on projects, maintain history of all changes made, and manage different versions of their work. Subversion is centralized, meaning it uses a central repository where all changes are stored, making it ideal for teams that need to maintain control over their codebase. The official website, subversion.apache.org, provides detailed documentation, installation guides, and resources to help users manage their software development process efficiently using SVN.
+
+* [tortoisesvn](https://tortoisesvn.net/index.de.html)
+* [mMigrate from svn to git](https://www.gitkraken.com/blog/migrate-from-svn-to-git-guide)
 
 ## Package Management
 
@@ -130,9 +211,24 @@ Kustomize allows users to create reusable and maintainable Kubernetes manifests 
 
 ### PIP
 
+[Pip](https://pip.pypa.io/en/stable/getting-started/) - "is the package installer for Python, enabling users to easily install and manage Python libraries and packages."
+
+PIP allows developers to download packages from the Python Package Index (PyPI) and install them into their Python environment. Pip helps manage dependencies, ensuring that the necessary packages for a project are installed and up-to-date. It is an essential tool for Python developers to manage their software environments.
+
+* [PIP](https://pypi.org/project/pip/)
+
 ### NPM
 
-### Java JAR/WAR
+[NPM (Node Package Manager)](https://www.npmjs.com) - "is the default package manager for the JavaScript runtime environment Node.js."
+
+NPM helps developers manage and distribute reusable code packages (modules), enabling the installation, sharing, and versioning of libraries and dependencies within JavaScript and Node.js projects. The npm website (npmjs.com) provides access to a vast registry of open-source packages, as well as tools for managing project dependencies, running scripts, and publishing packages. It is a key component of the modern JavaScript ecosystem, widely used for both front-end and back-end development.
+
+### Java Archiv
+
+[JAR](https://docs.oracle.com/en/java/javase/17/docs/specs/jar/jar.html) file is a file format based on the popular ZIP file format and is used for aggregating many files into one. A JAR file is essentially a zip file that contains an optional META-INF directory. A JAR file can be created by the command-line jar tool, or by using the java.util.jar API in the Java platform. There is no restriction on the name of a JAR file, it can be any legal file name on a particular platform.
+
+* [WAR](https://en.wikipedia.org/wiki/WAR_(file_format))
+* [EAR](https://en.wikipedia.org/wiki/EAR_(file_format))
 
 ## Terminals
 
