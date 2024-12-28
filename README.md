@@ -10,6 +10,7 @@ Not an [awesome-docker](https://github.com/veggiemonk/awesome-docker) list. Inst
 - Solutions for running containers locally and remotely
 - Helper tools and libraries to inspect, edit, or move images
 - In-depth write-ups and video resources on the above.
+- Tools that support the container development.
 
 The project is WIP. The current list of categories includes:
 
@@ -19,6 +20,7 @@ The project is WIP. The current list of categories includes:
 - [Container networking tools](./NETWORKING.md)
 - [Interesting GitHub organizations](./ORGANIZATIONS.md)
 - [Container Standards and Specifications](./SPECIFICATIONS.md)
+- [Container Tools](./TOOLS.md)
 
 ## Audience
 
