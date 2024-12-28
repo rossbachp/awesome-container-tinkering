@@ -4,7 +4,7 @@ An ever-growing list of tools to tinker with containers.
 
 ## Project
 
-Not an [awesome-docker](https://github.com/veggiemonk/awesome-docker) list. Instead of being a beginner-focused all-encompassing list of resources to get into containers, this project will be collecting links to (and thoughts about):
+Not an [awesome-docker](https://github.com/veggiemonk/awesome-docker) list. Instead of being beginner-focused all-encompassing list of resources to get into containers, this project will be collecting links to (and thoughts about):
 
 - Lower-level building blocks (runtimes, libraries, CLIs)
 - Solutions for running containers locally and remotely
@@ -22,6 +22,7 @@ The project is WIP. The current list of categories includes:
 - [Interesting GitHub organizations](./ORGANIZATIONS.md)
 - [Container Standards and Specifications](./SPECIFICATIONS.md)
 - [Container Tools](./TOOLS.md)
+- [Kubernetes](./KUBERNETES.md)
 
 ## Audience
 
