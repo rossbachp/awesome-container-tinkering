@@ -137,6 +137,20 @@ Like Kubernetes the Hard Way, but for building containers.
 An image converter that enables running unmodified containers on WASM (various runtimes: wasmtime, wamr, wazero, and even in the browser).
 The tool creates a WASM image that runs the container (using the standard `runc` runtime) and the Linux kernel on the emulated (via Bochs or TinyEMU) CPU.
 
+### bootc
+
+<a href="https://github.com/containers/bootc">bootc</a> - "Boot and upgrade [virtual or physical machines] via container images."
+
+The project aims to use standard OCI/Docker images for bootable host systems - as a build, transport, and delivery format for base OS images.
+Created with bootc container images include a Linux kernel (in e.g. `/usr/lib/modules`), which is used to boot a full-fledged physical or virtual machine.
+After booting on a server, such an image runs not in a container but as the host OS.
+
+### docker-to-linux
+
+<a href="https://github.com/iximiuz/docker-to-linux">docker-to-linux</a> - "Make bootable Linux disk image (ab)using Docker."
+
+A similar idea to bootc, but tailored for edu purposes. Launch a base Linux container (Debian, Alpine, etc.), pull in Linux kernel & init system (systemd, OpenRC, etc.), dump container's filesystem to a disk image, install bootloader (syslinux) to this image, and convert it into a QEMU (or the like) VM image.
+
 
 ## Image Inspection
 
@@ -210,6 +224,10 @@ An open-source registry implementation for storing and distributing container im
 <a href="https://github.com/regclient/regclient">regclient</a> - "Docker and OCI Registry Client in Go and tooling using those libraries."
 
 A client interface to interact with registries: inspect images w/o pulling, list repository's tags, list registry's repositories (if supported), efficiently copy images between repositories, import/export OCI and Docker images, etc. Seems to be written from scratch with just a few dependencies.
+
+### ⚠️ reg
+
+<a href="https://github.com/genuinetools/reg">reg</a> - "Docker registry v2 command line client and repo listing generator with security checks." The project looks abandoned.
 
 ### OCI Registry Artifact Storage (ORAS)
 

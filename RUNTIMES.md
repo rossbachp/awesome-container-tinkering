@@ -69,9 +69,16 @@ Partially systematized. Eventually, will include some commentary.
 
 <a href="https://github.com/kuasar-io/kuasar">Kuasar</a> - "An efficient container runtime that provides cloud-native, all-scenario multiple sandbox container solutions." Kuasar is a _facade runtime_ that turns other runtimes into _sandboxers_ implementing the <a href="https://github.com/containerd/containerd/issues/4131">containerd Sandbox API</a>. Currently supported sandboxers: MicroVM (Cloud Hypervisor, StratoVirt and QEMU), App Kernel (gVisor and Quark), and Wasm (WasmEdge).
 
-### ⚠️ urunc
+### urunc
 
-<a href="https://github.com/nubificus/urunc">urunc</a> - "The urunc is a bridge that fill the gap between traditional unikernels and containerized environments, enabling seamless integration with cloud-native architectures". Urunc is designed to fully leverage the container semantics and benefit from the OCI tools and methodology, urunc aims to become "runc for unikernels", while offering compatibility with the Container Runtime Interface (CRI). By relying on underlying hypervisors, urunc launches unikernels provided by OCI-compatible images, allowing developers and administrators to package, deliver, deploy, and manage their software using familiar cloud-native practices.
+<a href="https://github.com/nubificus/urunc">urunc</a> - "A simple container runtime that aspires to become `runc` for unikernels."
+urunc leverages the OCI container semantics and offers compatibility with the Kubernetes Container Runtime Interface (CRI) for unikernels. It uses a hypervisor to launch unikernels provided by OCI-compatible images, allowing packaging, delivering, and managing unikernel-based software using traditional Cloud Native practices.
+More about the design and concept <a href="https://static.sched.com/hosted_files/kccnceu2024/af/NUBIS-Unikernels-k8s-Knative.pdf">in this KubeCon EU 2024 talk</a>.
+
+### Contrast
+
+<a href="https://github.com/edgelesssys/contrast">Contrast</a> - "Deploy and manage confidential containers on Kubernetes."
+Confidential Containers are Kubernetes Pods that are executed inside specialized microVMs, which provide strong hardware-based isolation from the surrounding environment. Contrast works with unmodified OCI containers in a lift-and-shift approach. The project is based on <a href="https://github.com/kata-containers/kata-containers">Kata Containers</a> and <a href="https://github.com/confidential-containers">Confidential Containers</a>, and it currently targets the <a href="https://learn.microsoft.com/en-us/azure/confidential-computing/confidential-containers-on-aks-preview">CoCo preview on AKS</a>.
 
 ### ⚠️ crun-wasm
 
