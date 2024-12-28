@@ -1,6 +1,6 @@
 # Image Registries, Artifact Managment And Related Tools
 
-Here you can find information about image registries and general artifact management
+Here you can find information about image registries and general artifact management.
 
 ## Image registries projects
 
@@ -41,6 +41,10 @@ As the central hub for DevOps, JFrog Artifactory seamlessly integrates with your
 ### Chart Museum
 
 [ChartMuseum](https://chartmuseum.com) is an open-source Helm Chart Repository server written in Go (Golang), with support for cloud storage backends, including Google Cloud Storage, Amazon S3, Microsoft Azure Blob Storage, Alibaba Cloud OSS Storage and Openstack Object Storage.
+
+### GitHub Pages
+
+<a href="https://github.com/helm/chart-releaser">cr</a> is a tool designed to help GitHub repos self-host their own chart repos by adding Helm chart artifacts to GitHub Releases named for the chart version and then creating an index.yaml file for those releases that can be hosted on GitHub Pages or anywhere.
 
 ## Cloud registry services
 
@@ -96,6 +100,23 @@ A client interface to interact with registries: inspect images w/o pulling, list
 
 Since the invention of OCI registries, people have been (ab)using them to store non-container things (Helm charts, OPA policies, even video files can be stored this way). The modern registries are evolving as generic artifact stores, and the ORAS project provides a way to push and pull OCI Artifacts (read _arbitrary files_) to and from OCI Registries. The project consists of a CLI (<a href="https://github.com/oras-project/oras">_oras_</a>) and libraries (<a href="https://github.com/oras-project/oras-go">Go</a>, <a href="https://github.com/oras-project/oras-py">Python</a>).
 
+### Spegel
+
+[Spegel](https://github.com/spegel-org/spegel) enables each node in a Kubernetes cluster to act as a local registry mirror, allowing nodes to share images between themselves. Any image already pulled by a node will be available for any other node in the cluster to pull.
+
+### Dragonfly
+
+[Dragonfly](https://github.com/dragonflyoss/Dragonfly2) is an open source P2P-based file distribution and image acceleration system. It is hosted by the Cloud Native Computing Foundation (CNCF) as an Incubating Level Project. Its goal is to tackle all distribution problems in cloud native architectures. Currently Dragonfly focuses on being:
+
+- Simple: Well-defined user-facing API (HTTP), non-invasive to all container engines;
+- Efficient: Seed peer support, P2P based file distribution to save enterprise bandwidth;
+- Intelligent: Host-level speed limit, intelligent flow control due to host detection;
+- Secure: Block transmission encryption, HTTPS connection support.
+
+### Kraken
+
+[Kraken](https://github.com/uber/kraken) is a P2P-powered Docker registry that focuses on scalability and availability. It is designed for Container image management, replication, and distribution in a hybrid cloud environment. With pluggable backend support, Kraken can easily integrate into existing OCI registry setups as the distribution layer.
+
 ### 🧑‍🔬 Docker Hub Tool
 
 <a href="https://github.com/docker/hub-tool">Docker Hub Tool</a> - "Docker Hub experimental CLI tool."
@@ -105,6 +126,20 @@ A CLI tool for interacting with the Docker Hub. Get information about your image
 ### Helm
 
 [Helm](https://helm.sh) stands as a package manager tailored for Kubernetes environments, streamlining the deployment process of applications and services within Kubernetes clusters. Its primary advantage lies in simplifying the orchestration of complex deployments, particularly those that are highly repeatable or needed across diverse scenarios. By providing a structured approach to managing Kubernetes manifests and configurations, Helm empowers users to efficiently package, version, and deploy their applications, fostering consistency and scalability across Kubernetes deployments.
+
+### 🧑‍🔬 helmper
+
+[helmper](https://github.com/ChristofferNissen/helmper) is a little tool that reads Helm Charts from remote OCI registries and pushes the charts container images to your registries with optional OS level vulnerability patching.
+
+The helmper tool provides an interface to reduce the maintenance burden associated with managing a large collection of Helm Charts by:
+
+- automatically detecting all enabled container images in charts
+- providing an easy way to stay up to date on new chart releases
+- providing option to only import new images, or all images
+- enabling quick patching(and re-patching) of all images
+- enabling signing of images as an integrated part of the process
+- providing a mechanism to check requirements/dependencies before 
+- deploying charts with fx GitOps
 
 ### Trivy
 
@@ -118,6 +153,8 @@ A CLI tool for interacting with the Docker Hub. Get information about your image
 
 [Syft](https://github.com/anchore/syft), renowned as a potent SBOM (software bill of materials) tool, excels in providing comprehensive insights into container images and filesystems, empowering users with invaluable visibility into software dependencies and vulnerabilities. Moreover, its seamless integration with the docker CLI as the [sbom-cli-plugin](https://github.com/docker/sbom-cli-plugin) further enhances its accessibility and usability within containerized environments.
 
+## Container Sigining
+
 ### Cosign
 
 [Cosign](https://github.com/sigstore/cosign) presents a comprehensive array of functionalities, ranging from its pioneering 'Keyless signing' feature supported by the Sigstore public good Fulcio certificate authority and Rekor transparency log, to its versatile support for Hardware and KMS signing, seamless integration with cosign-generated encrypted private/public keypairs for signing, robust Container Signing capabilities, secure Verification, and Storage in an OCI registry, alongside flexibility for users to employ their own PKI solutions.
@@ -126,8 +163,10 @@ A CLI tool for interacting with the Docker Hub. Get information about your image
 
 The [notary](https://github.com/notaryproject/notary) client and server leverage The [Update Framework (TUF)](https://theupdateframework.io), a robust and secure framework designed to address the challenges of software distribution and updates. Rooted in a strong foundation of security principles, TUF provides a comprehensive solution for ensuring the integrity and authenticity of software packages throughout their lifecycle. By implementing TUF within the notary client and server, users benefit from a proven, standardized approach to securing software distribution, safeguarding against various threats such as tampering, supply chain attacks, and unauthorized modifications.
 
-### OpenPubKey
+### 🧑‍🔬 OpenPubKey
 
 [OpenPubkey](https://github.com/openpubkey/openpubkey) introduces a groundbreaking protocol that harnesses the capabilities of OpenID Providers (OPs) to establish secure bindings between identities and public keys. By extending OpenID Connect (OIDC), OpenPubkey facilitates the inclusion of user- or workload-generated public keys, empowering identities to authenticate and sign messages or artifacts within the OIDC ecosystem. This innovative approach enhances security and trust, enabling seamless integration of identity management with cryptographic operations, and fostering a more robust foundation for secure communication and transactions. 
 
 In 2023, Docker Inc. announced their adoption of the [OpenPubKey](https://www.docker.com/blog/signing-docker-official-images-using-openpubkey/) project to bolster their Secure Build Pipeline Solution. This strategic move underscores their commitment to enhancing security within their ecosystem by leveraging the capabilities of OpenPubKey to fortify identity management and cryptographic operations throughout the build pipeline.
+
+
