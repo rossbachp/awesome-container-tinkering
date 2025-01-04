@@ -22,6 +22,7 @@ The project is WIP. The current list of categories includes:
 - [Interesting GitHub organizations](./ORGANIZATIONS.md)
 - [Container Standards and Specifications](./SPECIFICATIONS.md)
 - [Container Tools](./TOOLS.md)
+- [Container OS](./CONTAINER-OS.md)
 - [Kubernetes](./KUBERNETES.md)
 
 ## Audience
