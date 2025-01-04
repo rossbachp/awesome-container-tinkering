@@ -81,3 +81,11 @@ CDI provides a standard interface for device plugins to interface with Kubernete
 The [Containerd NRI (Node Resource Interface) ](https://github.com/containerd/nri)is an open-source project designed to extend container runtimes with support for exposing node-level resources to containerized workloads. NRI allows container runtimes like containerd to integrate with specific device management systems or hardware capabilities, enabling containers to leverage specialized resources (such as GPUs, network interfaces, or storage devices). By using NRI, Kubernetes and other container orchestration platforms can easily manage these node-level resources, improving efficiency and performance for resource-intensive applications. The NRI project provides a standardized approach for accessing and managing these resources in Kubernetes and other containerized environments.
 
 * [NVIDIA device plugin for Kubernetes](https://github.com/NVIDIA/k8s-device-plugin)
+
+### Dynamic Resource Allocation - DRA
+
+[Dynamic Resource Allocation](https://kubernetes.io/docs/concepts/scheduling-eviction/dynamic-resource-allocation/) is an API for requesting and sharing resources between pods and containers inside a pod. It is a generalization of the persistent volumes API for generic resources. Typically those resources are devices like GPUs.
+
+* [Nvidia DRA Driver](https://github.com/NVIDIA/k8s-dra-driver)
+* [Dynamic Resource Allocation in Kubernetes](https://seifrajhi.github.io/blog/k8s-dynamic-resource-allocation-dra/)
+* [DRA example driver](https://github.com/kubernetes-sigs/dra-example-driver)
