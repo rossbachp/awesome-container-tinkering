@@ -60,7 +60,6 @@ Partially systematized. Eventually, will include some commentary.
 
 <a href="https://github.com/systemd/systemd/blob/main/src/nspawn/nspawn.c">systemd-nspawn</a> - "Like the chroot command, but it is a chroot on steroids." May be used to run a command or OS in a light-weight namespace container.
 
-
 ### NsJail
 
 <a href="https://github.com/google/nsjail">NsJail</a> - "A light-weight process isolation tool, making use of Linux namespaces and seccomp-bpf syscall filters (with help of the kafel bpf language)."
@@ -119,6 +118,8 @@ The  <a href="https://github.com/fuweid/embedshim">embedshim</a> is the kind of 
 
 <a href="https://github.com/Mirantis/virtlet">virtlet</a> - "Kubernetes CRI implementation for running VM workloads."
 
+
+
 ### LXC
 
 <a href="https://github.com/lxc/lxc">LXC</a> - "Linux Containers." An alternative (i.e., non-OCI) implementation of containers using Linux OS-level virtualization primitives (namespaces, cgroups, etc). Daemonless, can work as a library or as a CLI tool. Back in 2013, Docker started as a UX layer on top of LXC but eventually moved to its own implementation (known as **libcontainer** & **runc** today). The key design difference between Docker and LXC is that the former focuses on single-purpose containers (i.e., one container - one application), while the latter tries to be a seamless replacement for traditional (potentially multi-tenant) Linux servers (VM or bare metal, doesn't matter). Read this <a href="https://lwn.net/Articles/907613/">alternative story of containers on LWN.net for more</a>.
@@ -131,6 +132,7 @@ The  <a href="https://github.com/fuweid/embedshim">embedshim</a> is the kind of 
 ### 🎓 conman
 
 <a href="https://github.com/iximiuz/conman">conman</a> - a toy container manager written for educational purposes. <a href="https://iximiuz.com/en/series/implementing-container-manager/">Read more about the conman project on iximiuz.com</a>.
+
 
 ## High-level container runtimes
 
@@ -170,6 +172,25 @@ Regular containers but with systemd as PID 1 and an SSH daemon inside. Such "mac
 
 <a href="https://github.com/joaompinto/rootbox">Rootbox</a> - "An extremely simple and fast container engine for Linux and WSL, written in Python."
 
+### Kubelet
+
+<a href="https://github.com/kubernetes/kubelet">Kubelet</a> -  "is an high level runtime component of the Kubernetes ecosystem. It works as a node-level agent to help with container management and orchestration within a Kubernetes cluster."
+
+Find more information to the Kubelet project:
+
+* [Kubernetes docs of Kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)
+
+### Virtual-kubelet
+
+< a href="https://github.com/virtual-kubelet/virtual-kubelet">Virtual-kubelet</a> - "is is an Kubernetes kubelet implementation that masquerades as a kubelet for the purposes of connecting Kubernetes to other APIs. This allows the nodes to be backed by other services like ACI, AWS Fargate, IoT Edge, Tensile Kube"
+
+### MacOS-vz-kubelet
+
+<a href="https://github.com/agoda-com/macOS-vz-kubelet">macOS-vz-kubelet</a> - "is bridges the worlds of Kubernetes and native macOS workloads. It enables macOS hosts to act as Kubernetes nodes, allowing you to deploy and manage macOS Virtual Machines at scale. The project also supports running Docker containers alongside macOS VMs within the same Pod, providing flexibility for hybrid workloads."
+
+Find more information to the macOS-vz-kubelet project:
+
+* [Explain macOS-vz-kubelet ](https://medium.com/agoda-engineering/how-we-integrated-native-macos-workloads-with-kubernetes-b4d3c14881a0)
 
 ## Container-runtime shims
 
