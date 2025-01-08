@@ -43,7 +43,7 @@ Each distribution may include distinctive features, such as advanced security, c
 
 [Kubespray](https://github.com/kubernetes-sigs/kubespray) is an open-source tool for deploying and managing production-ready Kubernetes clusters. It uses Ansible playbooks to automate the setup, configuration, and scaling of clusters across various environments, including bare-metal and cloud platforms. Kubespray supports multi-node clusters, high availability, and advanced networking features, making it ideal for users who need a customizable and flexible way to deploy Kubernetes.
 
-### Kops
+### kOps
 
 [Kops (Kubernetes Operations)](https://kops.sigs.k8s.io) is an open-source tool for creating, managing, and maintaining highly-available Kubernetes clusters in cloud environments, especially on AWS. It automates cluster provisioning, upgrades, and scaling, while supporting advanced features like multi-zone deployments and custom configurations. Kops is ideal for production-grade Kubernetes deployments, offering ease of use and strong integration with cloud-native infrastructures.
 
@@ -82,10 +82,14 @@ Each distribution may include distinctive features, such as advanced security, c
 ## Kubernetes Cloud Services
 
 * [Microsoft - AKS](https://azure.microsoft.com/en-us/products/kubernetes-service)
-* [Amzone - EKS](https://aws.amazon.com/eks/)
+* [Amazon - EKS](https://aws.amazon.com/eks/)
 * [Google - GKE](https://cloud.google.com/kubernetes-engine)
 * [Stackit - SKE ](https://www.stackit.de/en/product/kubernetes/)
 * [Digital Ocean - DOKS](https://www.digitalocean.com/products/kubernetes)
 * [Fly - FKS](https://fly.io/docs/kubernetes/)]
 * [Scaleway - kapsule/](https://www.scaleway.com/en/kubernetes-kapsule/)
 * [Syseleven - Metakube](https://www.syseleven.de/produkte-services/kubernetes/)
+* [Oracle Kuberntes Engine - OKE](https://www.oracle.com/cloud/cloud-native/kubernetes-engine/)
+* [IBM Cloud Kubernetes Service](https://www.ibm.com/products/kubernetes-service)
+* [Telekom Cloud Container Engine - CCE](https://www.open-telekom-cloud.com/de/produkte-services/core-services/cloud-container-engine)
+* [Alibaba Container Service for Kubernetes - ACK ](https://www.alibabacloud.com/en/product/kubernetes)
