@@ -81,15 +81,15 @@ Each distribution may include distinctive features, such as advanced security, c
 
 ## Kubernetes Cloud Services
 
-* [Alibaba Container Service for Kubernetes - ACK ](https://www.alibabacloud.com/en/product/kubernetes)
-* [Amazon - EKS](https://aws.amazon.com/eks/)
-* [Digital Ocean - DOKS](https://www.digitalocean.com/products/kubernetes)
-* [Fly - FKS](https://fly.io/docs/kubernetes/)]
-* [Google - GKE](https://cloud.google.com/kubernetes-engine)
-* [IBM Cloud Kubernetes Service](https://www.ibm.com/products/kubernetes-service)
-* [Microsoft - AKS](https://azure.microsoft.com/en-us/products/kubernetes-service)
+* [Alibaba Container Service for Kubernetes - ACK](https://www.alibabacloud.com/en/product/kubernetes)
+* [Amazon Elastic Kubernetes Service- EKS](https://aws.amazon.com/eks/)
+* [Digital Ocean Kubernetes Service- DOKS](https://www.digitalocean.com/products/kubernetes)
+* [Fly Kubernetes Service - FKS](https://fly.io/docs/kubernetes/)]
+* [Google Kubernetes Engine - GKE](https://cloud.google.com/kubernetes-engine)
+* [IBM Cloud Kubernetes Service - ICKS ](https://www.ibm.com/products/kubernetes-service)
+* [Microsoft Azure Kubernetes Service - AKS](https://azure.microsoft.com/en-us/products/kubernetes-service)
 * [Oracle Kuberntes Engine - OKE](https://www.oracle.com/cloud/cloud-native/kubernetes-engine/)
 * [Scaleway - kapsule/](https://www.scaleway.com/en/kubernetes-kapsule/)
-* [Stackit - SKE ](https://www.stackit.de/en/product/kubernetes/)
+* [Stackit Kubernetes Engine - SKE ](https://www.stackit.de/en/product/kubernetes/)
 * [Syseleven - Metakube](https://www.syseleven.de/produkte-services/kubernetes/)
 * [Telekom Cloud Container Engine - CCE](https://www.open-telekom-cloud.com/de/produkte-services/core-services/cloud-container-engine)
