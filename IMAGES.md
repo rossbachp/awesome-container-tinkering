@@ -2,6 +2,8 @@
 
 ## Base images
 
+* [Artifact Distributors](./ARTIFACT-DISTRIBUTORS.md)
+
 ### Distroless 1.0
 
 <a href="https://github.com/GoogleContainerTools/distroless">distroless</a> - "Language focused docker images, minus the operating system" _aka_ "scratch for everyone else." 
@@ -77,6 +79,14 @@ The tool consists of a builder backend (BuildKit daemon bound to the kubelet's u
 <a href="https://github.com/hashicorp/packer">Packer</a> - "A tool for creating identical machine images for multiple platforms from a single source configuration."
 
 Packer is primarily focused on producing virtual machine images but it also allows building Docker, LXC, and LXD images using a similar to VM-provisioning procedure (read, by putting shell commands into a HCL file).
+
+### ImageBuilder
+
+<a href="https://github.com/kubernetes-sigs/image-builder">Image Builder</a> - "is a tool designed to create Kubernetes virtual machine images compatible with various infrastructure providers. These VM images are primarily intended for use with Cluster API but are also suitable for other setups that rely on Kubeadm."
+
+The project utilizes Packer and Ansible to automate the image creation process, ensuring consistency and repeatability across different environments. It supports multiple operating systems and cloud platforms, enabling users to customize images according to their specific requirements.
+
+* [ImageBuilder Quickstart](https://image-builder.sigs.k8s.io/capi/quickstart)
 
 ### Cloud Native Buildpacks
 
@@ -191,13 +201,11 @@ By just specifying the image name in the path like <a href="https://ima.ge.cx/ng
 
 <a href="https://github.com/opencontainers/umoci">umoci</a> - "umoci modifies Open Container images."
 
-
 ## Image Optimization
 
 ### DockerSlim
 
 <a href="https://github.com/docker-slim/docker-slim">DockerSlim</a> - "Don't change anything in your Docker container image and minify it by up to 30x (and for compiled languages even more)."
-
 
 ## Image Distribution
 
@@ -241,8 +249,7 @@ Since the invention of OCI registries, people have been (ab)using them to store 
 
 A CLI tool for interacting with the Docker Hub. Get information about your images from the terminal. Docker's experiment to build a Docker Hub CLI tool. The intention of this project is to get user feedback and then to add this functionality to the Docker CLI itself.
 
-
-## Libraries
+## Image Libraries
 
 ### go-containerregistry
 

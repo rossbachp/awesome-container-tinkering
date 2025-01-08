@@ -16,6 +16,7 @@ The project is WIP. The current list of categories includes:
 
 - [Container runtimes](./RUNTIMES.md)
 - [Image builders, viewers, editors](./IMAGES.md)
+- [Artifact Distributors](./ARTIFACT-DISTRIBUTORS.md)
 - [Development environments](./ENVIRONMENTS.md)
 - [Container networking tools](./NETWORKING.md)
 - [Image distribution and artifact management](./DISTRIBUTIONS.md)
