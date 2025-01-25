@@ -23,6 +23,14 @@ Pull-through cache for any registry (not just `docker.io`), two storage back-end
 
 [harbor](https://goharbor.io) stands as an open-source registry, safeguarding artifacts through policies and role-based access control. It ensures that images undergo scanning to eliminate vulnerabilities and are signed as trusted. As a CNCF-graduated project, Harbor guarantees compliance, performance, and interoperability, enabling you to consistently and securely manage artifacts across cloud-native compute platforms such as Kubernetes and Docker.
 
+### ZOT Registry
+
+[ZOT Registry](https://zotregistry.dev) is an open-source, OCI-native container image registry designed for simplicity and compliance with OCI standards. It offers a single statically built binary for easy installation without additional dependencies, operates without requiring elevated host privileges, and includes features such as security scanning, authentication, authorization, garbage collection, and deduplication. Zot supports multiple platforms, including Linux, macOS, Intel, ARM, Raspberry Pi, cloud, and bare-metal environments.
+
+### Quay
+
+[Quay](https://github.com/quay/quay) is an open-source container image registry that enables users to build, store, and distribute containerized applications securely and efficiently. It offers a user-friendly web interface, image vulnerability scanning through integration with Clair, and robust access controls to ensure the security of your repositories. Designed for scalability, Quay can be deployed across various environments, from local setups to large-scale enterprise infrastructures. It supports deployment as a standalone container or on Kubernetes using the Quay Operator.
+
 ### Artifact Hub
 
 [Artifact Hub](https://github.com/artifacthub/hub) serves as a web-based platform facilitating the discovery, installation, and publication of packages and configurations for Cloud Native environments.
@@ -75,7 +83,7 @@ The [Google Container Registry](https://cloud.google.com/artifact-registry) is d
 
 ### Quay.io
 
-The mission of [Quay](https://quay.io) is store your containers securely. Ensure your apps are stored privately, with access that you control. Quay is teamwork optimized, with powerful access controls. It use offen by Red Hat based project like podman or RKT.
+The mission of [Quay.io](https://quay.io) is store your containers securely. Ensure your apps are stored privately, with access that you control. Quay is teamwork optimized, with powerful access controls. It use offen by Red Hat based project like podman or RKT.
 
 ## Tools
 
