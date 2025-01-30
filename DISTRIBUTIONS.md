@@ -179,5 +179,3 @@ The [notary](https://github.com/notaryproject/notary) client and server leverage
 [OpenPubkey](https://github.com/openpubkey/openpubkey) introduces a groundbreaking protocol that harnesses the capabilities of OpenID Providers (OPs) to establish secure bindings between identities and public keys. By extending OpenID Connect (OIDC), OpenPubkey facilitates the inclusion of user- or workload-generated public keys, empowering identities to authenticate and sign messages or artifacts within the OIDC ecosystem. This innovative approach enhances security and trust, enabling seamless integration of identity management with cryptographic operations and fostering a more robust foundation for secure communication and transactions. 
 
 In 2023, Docker Inc. announced their adoption of the [OpenPubKey](https://www.docker.com/blog/signing-docker-official-images-using-openpubkey/) project to bolster their Secure Build Pipeline Solution. This strategic move underscores their commitment to enhancing security within their ecosystem by leveraging the capabilities of OpenPubKey to fortify identity management and cryptographic operations throughout the build pipeline.
-
-

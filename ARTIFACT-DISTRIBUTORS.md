@@ -8,7 +8,7 @@ including Helm charts, Kubernetes operators, and other cloud-native components, 
 integrating these resources into projects. In September 2024, Artifact Hub was accepted
 as a CNCF (Cloud Native Computing Foundation) incubating project, reflecting its growing importance in the cloud-native ecosystem.
 By providing a single experience for consumers, Artifact Hub addresses the challenges of discovering and
-utilizing cloud-native artifacts across different projects. 
+utilizing cloud-native artifacts across different projects.
 
 It supports a wide range of artifact types, including:
 
@@ -97,7 +97,7 @@ that eliminate Common Vulnerabilities and Exposures (CVEs) from the start, cover
 Python, Go, Postgres, Redis, and NGINX.Their solutions aim to reduce risk by providing rapidly patched, maintained, and updated
 open-source software, enabling businesses to meet compliance standards such as FedRAMP, NIST 800-53, PCI-DSS, SOC2, and
 CIS benchmarks without sacrificing developer productivity. Chainguard has garnered trust from leading companies like Snowflake,
-Canva, HPE, GitLab, Dell Technologies, and Wiz. 
+Canva, HPE, GitLab, Dell Technologies, and Wiz.
 
 ## Github Action Marketplace
 
@@ -140,7 +140,7 @@ References:
 
 [Distroless Container Images](https://github.com/GoogleContainerTools/distroless) is an open-source project from GoogleContainerTools
 that provides minimal container base images without a traditional package manager or shell. These images are focused solely on the
-application’s runtime requirements, enhancing security, performance, and size optimization. Distroless images integrate seamlessly with tools like Docker and Kubernetes, promoting better security practices 
+application’s runtime requirements, enhancing security, performance, and size optimization. Distroless images integrate seamlessly with tools like Docker and Kubernetes, promoting better security practices
 in containerized applications.
 
 ## Nixery
