@@ -251,7 +251,7 @@ A CLI tool for interacting with the Docker Hub. Get information about your image
 
 ## ContainerD Snapshotter
 
-A [Containerd Snapshotter](https://github.com/containerd/containerd/blob/main/docs/snapshotters/README.md) is a component responsible for managing container image layers and filesystem snapshots efficiently. It provides a copy-on-write (CoW) mechanism, enabling fast container startup and minimal storage usage. Snapshotters support different backend implementations like overlayfs, devmapper, zfs, blockfile, btrfs, native vfs and erofs or non standard remote plugins like fuse-overlayfs, nydus-snapshotter and nix-snapshotter, allowing flexibility based on system requirements.
+A [Containerd Snapshotter](https://github.com/containerd/containerd/blob/main/docs/snapshotters/README.md) is a crucial component in containerized environments, responsible for managing container image layers and filesystem snapshots with high efficiency. It leverages a copy-on-write (CoW) mechanism, which minimizes storage usage by allowing containers to share common layers while enabling rapid container startup. Snapshotters support a wide variety of backend implementations, including popular ones like overlayfs, devmapper, zfs, blockfile, btrfs, native vfs, and erofs. Additionally, there are support options for non-standard, remote plugins such as fuse-overlayfs, nydus-snapshotter, nix-snapshotter, as well as cloud service-specific snapshotters, providing extensive flexibility tailored to different system and infrastructure requirements. This diversity enables containerized applications to be deployed efficiently across various platforms, optimizing performance and storage management.
 
 ### OverlayFS
 
@@ -286,6 +286,18 @@ At the heart of the acceleration is overlaybd, which is a new remote image forma
 ### NIX snapshotter
 
 [Nix-snapshotter](https://github.com/pdtpartners/nix-snapshotter) enables Kubernetes to use Nix store paths as container images, bypassing traditional image layers and registries. It integrates with CRI to fetch packages from a Nix binary cache or build them dynamically while maintaining compatibility with standard OCI images. This approach ensures fully declarative and reproducible Kubernetes deployments.
+
+### GKE Image Streaming snapshotter
+
+[GKE Image Streaming](https://cloud.google.com/kubernetes-engine/docs/how-to/image-streaming?hl=de) allows Google Kubernetes Engine (GKE) to pull container images directly from the Google Cloud Storage (GCS) or other cloud repositories, reducing the need for a Docker registry. It supports snapshotted images, enabling efficient image management and faster deployments by leveraging cloud-native image distribution. This feature optimizes image delivery, enhances performance, and simplifies container management in Kubernetes clusters.
+
+### AKS Artifact Streaming snapshotter
+
+[Artifact Streaming](https://learn.microsoft.com/en-us/azure/aks/artifact-streaming) in Azure Kubernetes Service (AKS) enables efficient streaming of container images and other artifacts directly from Azure Container Registry (ACR) to AKS clusters. This approach minimizes storage overhead and improves image pull times by streaming images on-demand rather than pulling them fully at once. It enhances deployment speed and scalability in cloud-native environments by reducing resource usage and optimizing image distribution across clusters.
+
+### AWS snapshotter
+
+The [AWS Snapshotter](https://aws.amazon.com/de/blogs/aws/aws-fargate-enables-faster-container-startup-using-seekable-oci/) leverages Seekable OCI (SOCI) to accelerate container startup times on AWS Fargate by enabling on-demand streaming of container image layers. This approach reduces the need to fully download container images before execution, allowing for faster initialization and more efficient resource usage. SOCI enhances performance, especially for large images, by allowing containers to start quickly while retrieving only the required image data as needed.
 
 ## Image Libraries
 
