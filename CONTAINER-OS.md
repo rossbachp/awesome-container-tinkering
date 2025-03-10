@@ -33,6 +33,11 @@ Talos Linux sets a new standard for simplicity, security, and scalability in Kub
 
 [Bottlerocket](https://github.com/bottlerocket-os/bottlerocket) is an open-source, minimal operating system optimized for securely running containers. Developed by AWS, it is designed for modern containerized environments and offers features such as immutability, minimal attack surface, and built-in integrations with container orchestrators like Kubernetes. Bottlerocket employs image-based updates for reliability and consistency, ensuring smooth deployments in cloud, on-premises, or edge environments.
 
+## Photon OS
+
+[Photon OS ](https://vmware.github.io/photon/)is a lightweight, open-source Linux distribution optimized for cloud-native applications and containerized environments. Developed by VMware, it is designed for running Docker containers and integrates well with VMware vSphere, providing fast boot times and low overhead. Photon OS supports both traditional and cloud-native workloads, offering a secure and scalable platform for modern applications.
+
 ## 🪦 RancherOS
 
 [RancherOS](https://rancher.com/docs/os/v1.x/en/) is a lightweight deprecated Linux distribution built specifically for running containers. It simplifies infrastructure by running most system services as Docker containers and minimizes the OS to only what is essential for containerized workloads. With a focus on simplicity and automation, RancherOS is designed for modern container-centric environments, making it ideal for use in cloud, virtualization, and bare-metal deployments.
+

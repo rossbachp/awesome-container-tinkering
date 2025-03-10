@@ -249,6 +249,44 @@ Since the invention of OCI registries, people have been (ab)using them to store 
 
 A CLI tool for interacting with the Docker Hub. Get information about your images from the terminal. Docker's experiment to build a Docker Hub CLI tool. The intention of this project is to get user feedback and then to add this functionality to the Docker CLI itself.
 
+## ContainerD Snapshotter
+
+A [Containerd Snapshotter](https://github.com/containerd/containerd/blob/main/docs/snapshotters/README.md) is a component responsible for managing container image layers and filesystem snapshots efficiently. It provides a copy-on-write (CoW) mechanism, enabling fast container startup and minimal storage usage. Snapshotters support different backend implementations like overlayfs, devmapper, zfs, blockfile, btrfs, native vfs and erofs or non standard remote plugins like fuse-overlayfs, nydus-snapshotter and nix-snapshotter, allowing flexibility based on system requirements.
+
+### OverlayFS
+
+The standard overlayfs snapshotter in containerd uses OverlayFS to provide a copy-on-write (CoW) filesystem, enabling efficient storage and fast container startup. It layers image data dynamically, reducing duplication and improving performance. This is the default snapshotter for most Linux environments due to its simplicity and kernel-level integration.
+
+### DevMapper
+
+The [devmapper snapshotter](https://github.com/containerd/containerd/blob/main/docs/snapshotters/devmapper.md) in containerd leverages Device Mapper to provide thin-provisioned snapshots for container storage. It supports XFS and EXT4 filesystems, enabling efficient space usage and faster provisioning. This snapshotter is ideal for environments requiring persistent storage, strong isolation, and optimized disk utilization.
+
+### ZFS snapshotter
+
+[ZFS Snapshotter](https://github.com/containerd/zfs) is a containerd snapshotter that utilizes the ZFS filesystem to manage container images with advanced features like efficient snapshots, data integrity, and compression. It leverages ZFS's ability to handle large volumes of data and support copy-on-write (CoW) for optimized storage and performance. This snapshotter is ideal for environments requiring high reliability, data protection, and scalability.
+
+### Nydus snapshotter
+
+[Nydus Snapshotter](https://github.com/containerd/nydus-snapshotter) is a high-performance containerd snapshotter that enables data deduplication and lazy loading for container images. It uses a P2P distribution model, reducing storage and network overhead by loading only required data chunks on demand. This optimizes container startup times and enhances efficiency in large-scale deployments.
+
+### FUSE-OverlayFS snapshotter
+
+[fuse-overlayfs-snapshotter](https://github.com/containerd/fuse-overlayfs-snapshotter) is a snapshotter for containerd that leverages FUSE-based overlayfs, enabling unprivileged containers to use overlay filesystems without requiring kernel support. It improves compatibility in environments where native overlayfs is restricted, such as rootless containers. This enhances flexibility and security while maintaining efficient image storage and layering.
+
+### Stargz snapshotter
+
+[Stargz Snapshotter](https://github.com/containerd/stargz-snapshotter) is a containerd snapshotter that enables lazy loading of container images using eStargz format. It reduces startup time by fetching only necessary data on demand, improving efficiency in large-scale deployments. This snapshotter is ideal for speeding up container boot times, especially in cloud and edge environments.
+
+### Overlaybd snapshotter
+
+Accelerated Container Image (ACI) is a [containerd snapshotter](https://github.com/containerd/accelerated-container-image) designed for fast container startup by leveraging lazy loading and on-demand decompression. It optimizes image distribution by fetching only required data, reducing I/O overhead. This improves efficiency in cloud-native environments, especially for large-scale and high-performance workloads.
+
+At the heart of the acceleration is overlaybd, which is a new remote image format based on block device. Overlaybd backstore provides a merged view of a sequence of block-based layers in userspace and outputs as a virtual blocks device through [TCMU](https://www.kernel.org/doc/Documentation/target/tcmu-design.txt). It can be used for container acceleration by supporting fetching image data on-demand without downloading and unpacking the whole image before a container running. With overlaybd image format, we can cold start a container instantly.
+
+### NIX snapshotter
+
+[Nix-snapshotter](https://github.com/pdtpartners/nix-snapshotter) enables Kubernetes to use Nix store paths as container images, bypassing traditional image layers and registries. It integrates with CRI to fetch packages from a Nix binary cache or build them dynamically while maintaining compatibility with standard OCI images. This approach ensures fully declarative and reproducible Kubernetes deployments.
+
 ## Image Libraries
 
 ### go-containerregistry
