@@ -295,7 +295,11 @@ Screen enables features such as session persistence, where terminal sessions con
 
 ### bash
 
+[Oh My Bash ](https://github.com/ohmybash/oh-my-bash)is a framework for managing and enhancing the Bash shell environment. It provides a collection of plugins, themes, and customizations to improve the terminal experience, making it more user-friendly and visually appealing. With features like improved prompts, auto-suggestions, syntax highlighting, and customizable configurations, Oh My Bash streamlines workflows and boosts productivity for Bash users.
+
 ### zsh
+
+Zsh with [Oh My Zsh](https://ohmyz.sh) is a powerful combination for enhancing the terminal experience. Zsh is a highly customizable shell with features like advanced tab completion, globbing, and improved scripting capabilities. Oh My Zsh is a framework that adds even more functionality, providing a wide range of plugins, themes, and configuration options to make your terminal more productive, visually appealing, and efficient. It streamlines workflows, improves usability, and is popular among developers for its flexibility and ease of use.
 
 ### fish
 
@@ -323,6 +327,7 @@ Arc42 provides a structured approach to capturing and communicating architectura
 * [Architectural Decision Record](https://adr.github.io)
 * [adr-tools](https://github.com/npryce/adr-tools)
 * [Asciidoc tool ADR](https://unexist.dev/documentation/myself/2024/10/25/decision-records.html)
+* [DeciCollab](https://github.com/rossbachp/DeciCollab)
 
 ### RFC
 
