@@ -253,6 +253,10 @@ A CLI tool for interacting with the Docker Hub. Get information about your image
 
 A [Containerd Snapshotter](https://github.com/containerd/containerd/blob/main/docs/snapshotters/README.md) is a crucial component in containerized environments, responsible for managing container image layers and filesystem snapshots with high efficiency. It leverages a copy-on-write (CoW) mechanism, which minimizes storage usage by allowing containers to share common layers while enabling rapid container startup. Snapshotters support a wide variety of backend implementations, including popular ones like overlayfs, devmapper, zfs, blockfile, btrfs, native vfs, and erofs. Additionally, there are support options for non-standard, remote plugins such as fuse-overlayfs, nydus-snapshotter, nix-snapshotter, as well as cloud service-specific snapshotters, providing extensive flexibility tailored to different system and infrastructure requirements. This diversity enables containerized applications to be deployed efficiently across various platforms, optimizing performance and storage management.
 
+A great overview of containerd image handling can be found in the blog post by Samuel Karp:
+
+[Containerd Internals: Images](https://samuel.karp.dev/blog/2024/12/containerd-internals-images/)
+
 ### OverlayFS
 
 The standard overlayfs snapshotter in containerd uses OverlayFS to provide a copy-on-write (CoW) filesystem, enabling efficient storage and fast container startup. It layers image data dynamically, reducing duplication and improving performance. This is the default snapshotter for most Linux environments due to its simplicity and kernel-level integration.
