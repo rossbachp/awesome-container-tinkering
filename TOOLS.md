@@ -356,6 +356,7 @@ Hugo allows developers to create content-driven sites using simple markdown file
   * Third party Hugo modules and tools for building fast, modular, modern themes and static websites.
 * [Hugo Docker Images](https://docker.hugomods.com)
 * [Build an amazing docs site](https://getdoks.org)
+* [Docsy Theme - for creating great technical documentation sites](https://www.docsy.dev)
 
 ### Netlify
 
