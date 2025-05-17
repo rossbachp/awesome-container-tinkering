@@ -197,7 +197,7 @@ Flux automates deployment updates by applying changes as new code becomes availa
 JenkinsX automates the development and deployment of applications by providing a set of tools and workflows tailored for Kubernetes environments. Jenkins X supports GitOps, Kubernetes-native pipelines, and automated promotions through environments such as staging and production. It integrates with popular version control systems like GitHub and GitLab and features a strong focus on automating the entire software delivery pipeline, from code commit to deployment. Jenkins X aims to improve the speed and reliability of software delivery with minimal manual intervention.
 
 ### Fleet
-                              |
+
 [Fleet](https://fleet.rancher.io) is a lightweight GitOps solution built by Rancher (now part of SUSE) designed for massively scalable Kubernetes deployments. It allows you to manage thousands of clusters from a single Git repository. Fleet works by grouping clusters into bundles and applying GitOps workflows to ensure consistency across environments. It’s highly suited for edge, multi-tenant, or enterprise-scale Kubernetes setups.
 
 ### Keel
