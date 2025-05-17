@@ -6,7 +6,7 @@ Here you can find information about some useful container development tools.
 
 | Feature / Tool          | Docker Desktop                                         | OrbStack                     | Colima                                     | Rancher Desktop                   | Podman Desktop                           |
 |-------------------------|--------------------------------------------------------|------------------------------|--------------------------------------------|-----------------------------------|------------------------------------------|
-| **Platform Support**    | macOS, Windows                                         | macOS                        | macOS, Linux                               | macOS, Windows, Linux (beta)      | macOS, Windows, Linux                    |
+| **Platform Support**    | macOS, Windows, Linux                                  | macOS                        | macOS, Linux                               | macOS, Windows, Linux (beta)      | macOS, Windows, Linux                    |
 | **Container Engine**    | Docker (dockerd)                                       | Docker-compatible            | Docker (via containerd)                    | containerd or dockerd             | Podman (daemonless)                      |
 | **Kubernetes Support**  | Built-in                                               | Built-in                     | Yes                                        | Built-in                          | Partial (via Minikube etc.)              |
 | **GUI Dashboard**       | Yes                                                    | Yes                          | No                                         | Yes                               | Yes                                      |
@@ -184,15 +184,15 @@ Click here for a more curated list for awesome <a href="https://github.com/weave
 
 ArgoCD ensures application definitions, configurations, and environments are declarative and stored in version control, providing traceability and auditability. By continuously reconciling the desired state in Git with the actual state in the cluster, Argo CD makes deployments automated, reliable, and easy to manage.
 
-### Flux
+### FluxCD
 
-<a href="https://github.com/fluxcd/flux2"></a> - "is a Kubernetes-native GitOps tool that ensures clusters stay in sync with configuration sources such as Git repositories or OCI artifacts."
+<a href="https://github.com/fluxcd/flux2">FluxCD</a> - "is a Kubernetes-native GitOps tool that ensures clusters stay in sync with configuration sources such as Git repositories or OCI artifacts."
 
 Flux automates deployment updates by applying changes as new code becomes available. Designed for continuous delivery, Flux simplifies managing and versioning infrastructure and application configurations in a declarative manner.
 
 ### JenkinsX
 
-[Jenkins X](https://jenkins-x.io) is an open-source CI/CD solution designed for Kubernetes and cloud-native applications.
+[Jenkins X](https://jenkins-x.io) - "is an open-source CI/CD solution designed for Kubernetes and cloud-native applications."
 
 JenkinsX automates the development and deployment of applications by providing a set of tools and workflows tailored for Kubernetes environments. Jenkins X supports GitOps, Kubernetes-native pipelines, and automated promotions through environments such as staging and production. It integrates with popular version control systems like GitHub and GitLab and features a strong focus on automating the entire software delivery pipeline, from code commit to deployment. Jenkins X aims to improve the speed and reliability of software delivery with minimal manual intervention.
 
