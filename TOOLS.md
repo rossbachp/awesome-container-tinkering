@@ -2,6 +2,40 @@
 
 Here you can find information about some useful container development tools.
 
+## Container Development
+
+| Feature / Tool          | Docker Desktop                                         | OrbStack                     | Colima                                     | Rancher Desktop                   | Podman Desktop                           |
+|-------------------------|--------------------------------------------------------|------------------------------|--------------------------------------------|-----------------------------------|------------------------------------------|
+| **Platform Support**    | macOS, Windows                                         | macOS                        | macOS, Linux                               | macOS, Windows, Linux (beta)      | macOS, Windows, Linux                    |
+| **Container Engine**    | Docker (dockerd)                                       | Docker-compatible            | Docker (via containerd)                    | containerd or dockerd             | Podman (daemonless)                      |
+| **Kubernetes Support**  | Built-in                                               | Built-in                     | Yes                                        | Built-in                          | Partial (via Minikube etc.)              |
+| **GUI Dashboard**       | Yes                                                    | Yes                          | No                                         | Yes                               | Yes                                      |
+| **Resource Efficiency** | Medium                                                 | High                         | High                                       | Medium                            | High                                     |
+| **Open Source**         | Partial (Proprietary)                                  | No (Closed Source)           | Yes                                        | Yes                               | Yes                                      |
+| **Licensing**           | Free (limits apply), Paid                              | Paid (free trial)            | Free                                       | Free                              | Free                                     |
+| **Notable Highlights**  | Industry standard, feature-rich                        | Fast and light, VM-based     | CLI-focused, simple setup                  | Kubernetes-first, Docker alt      | Dev-focused, OCI-native                  |
+| **Official Website**    | [Link](https://www.docker.com/products/docker-desktop) | [Link](https://orbstack.dev) | [Link](https://github.com/abiosoft/colima) | [Link](https://rancherdesktop.io) | [Link](https://podman.io/podman-desktop) |
+
+### Docker for Desktop
+
+[Docker for Desktop](https://www.docker.com/products/docker-desktop) is a popular, full-featured Docker container runtime and GUI for macOS and Windows. It includes Docker Engine, Docker Compose, Kubernetes, and a user-friendly dashboard.
+
+### Orbstack
+
+[Orbstack](https://orbstack.dev) is a fast, lightweight alternative to Docker Desktop for macOS that supports containers, Linux VMs, and Kubernetes with low resource usage.
+
+### Colima
+
+[Colima](https://github.com/abiosoft/colima) is an open-source Docker and Kubernetes runtime for macOS and Linux, built on Lima and QEMU. Known for being minimal, fast, and compatible with Docker CLI.
+
+### Rancher For Desktop
+
+[Rancher For Desktop](https://rancherdesktop.io) is a Kubernetes and container management GUI tool that uses containerd or dockerd, offering a desktop-based way to manage local clusters.
+
+### Podman Desktop
+
+[Podman Desktop](https://podman.io/podman-desktop) is for Podman (daemonless container engine), offering container lifecycle management, Kubernetes YAML generation, and tight Linux support.
+
 ## Editor
 
 ### NeoVIM
@@ -132,6 +166,18 @@ Gradle supports multiple programming languages, including Java, Kotlin, Groovy, 
 
 Click here for a more curated list for awesome <a href="https://github.com/weaveworks/awesome-gitops">GitOps resources</a>.
 
+| Tool                  | Description                                                                          | Link                                                                           |
+|-----------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| **Argo CD**           | Declarative GitOps CD tool for Kubernetes that syncs and manages app state from Git. | [argoproj.github.io/argo-cd](https://argoproj.github.io/argo-cd)               |
+| **Flux**              | CNCF-graduated GitOps tool that automates delivery of Kubernetes workloads.          | [fluxcd.io](https://fluxcd.io)                                                 |
+| **Fleet**             | Lightweight GitOps tool from Rancher, designed to manage thousands of clusters.      | [fleet.rancher.io](https://fleet.rancher.io)                                   |
+| **Jenkins X**         | Kubernetes-native CI/CD platform using GitOps and Tekton for automation.             | [jenkins-x.io](https://www.jenkins-x.io)                                       |
+| **Weave GitOps**      | Enterprise-ready GitOps platform with policy and observability, built on Flux.       | [weave.works/oss/gitops-core](https://www.weave.works/oss/gitops-core)         |
+| **Keel**              | Automates Helm and Kubernetes deployments when container images are updated.         | [keel.sh](https://keel.sh)                                                     |
+| **Gitkube**           | Simple tool to deploy to Kubernetes by pushing to a Git remote.                      | [github.com/hasura/gitkube](https://github.com/hasura/gitkube)                 |
+| **Flagger**           | Progressive delivery operator that automates canaries and A/B rollouts.              | [flagger.app](https://flagger.app)                                             |
+| **Pipelines-as-Code** | GitOps-style CI/CD integration for OpenShift Pipelines (Tekton).                     | [openshift.dev/pipelines-as-code](https://www.openshift.dev/pipelines-as-code) |
+
 ### ArgoCD
 
 <a href="https://argo-cd.readthedocs.io/en/stable/">Argo CD</a> - "is a Kubernetes-native GitOps continuous delivery tool that automates the deployment and lifecycle management of applications."
@@ -150,6 +196,14 @@ Flux automates deployment updates by applying changes as new code becomes availa
 
 JenkinsX automates the development and deployment of applications by providing a set of tools and workflows tailored for Kubernetes environments. Jenkins X supports GitOps, Kubernetes-native pipelines, and automated promotions through environments such as staging and production. It integrates with popular version control systems like GitHub and GitLab and features a strong focus on automating the entire software delivery pipeline, from code commit to deployment. Jenkins X aims to improve the speed and reliability of software delivery with minimal manual intervention.
 
+### Fleet
+                              |
+[Fleet](https://fleet.rancher.io) is a lightweight GitOps solution built by Rancher (now part of SUSE) designed for massively scalable Kubernetes deployments. It allows you to manage thousands of clusters from a single Git repository. Fleet works by grouping clusters into bundles and applying GitOps workflows to ensure consistency across environments. It’s highly suited for edge, multi-tenant, or enterprise-scale Kubernetes setups.
+
+### Keel
+
+[Keel](https://keel.sh) is an automated deployment tool for Kubernetes that focuses on image update automation. It watches container registries and automatically updates Kubernetes deployments, StatefulSets, or Helm charts when a new image is pushed. Keel is simple to set up and works without requiring a full GitOps setup, making it ideal for small teams or use cases where pushing to Git isn’t preferred.
+
 ## SCM
 
 ### GIT
@@ -166,6 +220,10 @@ SVN allows developers to collaborate on projects, maintain history of all change
 
 * [tortoisesvn](https://tortoisesvn.net/index.de.html)
 * [mMigrate from svn to git](https://www.gitkraken.com/blog/migrate-from-svn-to-git-guide)
+
+### Mercurial
+
+[Mercurial (hg)](https://www.mercurial-scm.org) is a distributed source control management (SCM) system designed for efficient handling of large projects. It offers a simple and intuitive command-line interface, fast performance, and strong support for branching and merging. Mercurial is widely used in both open-source and enterprise environments as an alternative to Git.
 
 ## Package Management
 
@@ -293,6 +351,8 @@ Screen enables features such as session persistence, where terminal sessions con
 
 ### sh
 
+[Bourne shell /bin/sh](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html) is the standard shell binary on Unix-like systems — it’s the command-line interpreter used for executing shell scripts and interactive commands.
+
 ### bash
 
 [Oh My Bash ](https://github.com/ohmybash/oh-my-bash)is a framework for managing and enhancing the Bash shell environment. It provides a collection of plugins, themes, and customizations to improve the terminal experience, making it more user-friendly and visually appealing. With features like improved prompts, auto-suggestions, syntax highlighting, and customizable configurations, Oh My Bash streamlines workflows and boosts productivity for Bash users.
@@ -302,6 +362,8 @@ Screen enables features such as session persistence, where terminal sessions con
 Zsh with [Oh My Zsh](https://ohmyz.sh) is a powerful combination for enhancing the terminal experience. Zsh is a highly customizable shell with features like advanced tab completion, globbing, and improved scripting capabilities. Oh My Zsh is a framework that adds even more functionality, providing a wide range of plugins, themes, and configuration options to make your terminal more productive, visually appealing, and efficient. It streamlines workflows, improves usability, and is popular among developers for its flexibility and ease of use.
 
 ### fish
+
+[Fish](https://fishshell.com) (short for Friendly Interactive SHell) is a user-friendly, interactive shell designed to be easy to use out of the box. It focuses on interactive use, readability, and sensible defaults rather than strict POSIX compliance.
 
 ## Documentation As Code
 
@@ -339,6 +401,16 @@ Arc42 provides a structured approach to capturing and communicating architectura
 [Presenterm](https://mfontanini.github.io/presenterm/) - "is a tool that allows you to create and deliver presentations directly from your terminal using markdown format."
 
 Presenterm supports images, animated GIFs, customizable themes, and code highlighting to enhance presentations. Presenterm also enables exporting presentations into PDF format and includes various other features for a streamlined, command-line-driven presentation experience. It's an ideal choice for developers and tech enthusiasts who prefer working in a terminal environment.
+
+### Marp
+
+[Marp](https://marp.app) (Markdown Presentation Ecosystem) is an open-source tool that allows you to create slide decks from Markdown files easily. It’s designed for developers and writers who prefer writing presentations in Markdown syntax instead of complex slide-building software.
+
+Key features of Marp include the ability to author slides using simple Markdown syntax, allowing you to create headings, lists, images, and code blocks with ease. It supports custom themes and styling through CSS, enabling you to personalize the look of your presentations. Marp offers multiple export options, including HTML, PDF, and PowerPoint formats. It also provides a live preview feature so you can see your slides rendered instantly as you edit. Additionally, Marp integrates seamlessly as a CLI tool, a VS Code extension, and a web application, making it flexible for different workflows.
+
+The [Marp CLI](https://github.com/marp-team/marp-cli) is a command-line interface for converting Marp Markdown files into various formats such as HTML, PDF, PowerPoint, and images. It also supports live preview and server modes.
+
+[Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) is an extension that enhances Visual Studio Code with Marp-specific features, allowing you to write and preview slide decks directly within the editor.
 
 ### Reveal.js
 
